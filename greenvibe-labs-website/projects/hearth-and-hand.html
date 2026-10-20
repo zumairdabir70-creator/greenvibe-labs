@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hearth &amp; Hand | Handmade ceramics and woven textiles</title>
+<meta name="description" content="Hearth &amp; Hand is a small studio making ceramics and woven textiles by hand, made to order. Concept design by GreenVibe Labs.">
+<meta property="og:title" content="Hearth &amp; Hand">
+<meta property="og:description" content="Ceramics and textiles, made slowly by hand.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2327304F'/%3E%3Cpath d='M28 40h44l-6 32H34z' fill='%23F0B33B'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+:root{--sand:#F3EBDD;--sand2:#E8DCC6;--indigo:#27304F;--saffron:#F0B33B;--clay:#8C4B33;--ink:#222638;--muted:#555A70;--serif:"Young Serif",Georgia,serif;--sans:system-ui,-apple-system,"Segoe UI",sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--sand);color:var(--ink);font:400 1.05rem/1.65 var(--sans)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--indigo);line-height:1.12;margin:0 0 .5em}
+h1{font-size:clamp(2.6rem,7.5vw,5rem)}
+h2{font-size:clamp(1.9rem,4.5vw,3rem)}
+h3{font-size:1.15rem}
+p{margin:0 0 1em}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding-block:clamp(3.5rem,8vw,6rem)}
+:focus-visible{outline:3px solid var(--indigo);outline-offset:3px;border-radius:4px}
+.dark :focus-visible{outline-color:var(--saffron)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--indigo);color:#fff;padding:.6rem 1rem;z-index:200}.skip:focus{left:8px}
+.announce{background:var(--indigo);color:#F3EBDD;text-align:center;font-size:.9rem;padding:.5rem 1rem}
+header{background:var(--sand);position:sticky;top:0;z-index:50;border-bottom:1px solid #27304F22}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.logo{font:1.4rem var(--serif);color:var(--indigo);text-decoration:none}
+nav ul{display:none;gap:1.6rem;list-style:none;margin:0;padding:0}
+nav a{color:var(--indigo);text-decoration:none;font-weight:600}
+@media(min-width:760px){nav ul{display:flex}}
+.hero-grid{display:grid;gap:2.5rem;align-items:center}
+.hero p.lede{font-size:1.2rem;color:var(--muted);max-width:42ch}
+@media(min-width:860px){.hero-grid{grid-template-columns:1.1fr .9fr}}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.8rem 1.6rem;background:var(--saffron);color:var(--indigo);border-radius:999px;font:700 1rem var(--sans);text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.hero-art{background:var(--indigo);border-radius:260px 260px 24px 24px;aspect-ratio:4/5;max-width:420px;justify-self:center;width:100%;display:grid;place-items:center}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0 2rem}
+.tabs button{border:2px solid var(--indigo);background:none;color:var(--indigo);border-radius:999px;min-height:44px;padding:.3rem 1.2rem;font:600 .95rem var(--sans);cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--indigo);color:#fff}
+.grid{display:grid;gap:1.25rem;grid-template-columns:1fr 1fr}
+@media(min-width:800px){.grid{grid-template-columns:repeat(4,1fr)}}
+.item .pic{aspect-ratio:1/1;border-radius:18px;display:grid;place-items:center}
+.item .pic svg{width:66%}
+.item h3{margin:.8rem 0 0}
+.item p{margin:0;color:var(--muted);font-size:.95rem}
+.item .pr{font-weight:700;color:var(--indigo)}
+.story{background:var(--indigo);color:#E9E4D8}
+.story h2{color:#fff}
+.story-grid{display:grid;gap:2.5rem}
+@media(min-width:860px){.story-grid{grid-template-columns:1fr 1fr;align-items:center}}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.steps li{border-left:4px solid var(--saffron);padding-left:1rem}
+.steps strong{display:block;color:#fff;font-family:var(--serif);font-weight:400;font-size:1.15rem}
+.news{background:var(--sand2);border-radius:28px;padding:clamp(1.8rem,5vw,3.5rem);text-align:center}
+.news form{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;margin-top:1.2rem}
+.news input{flex:1 1 240px;max-width:380px;min-height:48px;padding:.6rem 1.1rem;border-radius:999px;border:2px solid var(--indigo);font:inherit;background:#fff}
+footer{background:#1A2038;color:#B7BCD0;padding-block:2rem;font-size:.9rem}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="announce">Made to order: please allow 2 to 3 weeks. Free shipping over $80.</div>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Hearth &amp; Hand</a>
+    <nav aria-label="Main"><ul><li><a href="#shop">Shop</a></li><li><a href="#story">Our process</a></li><li><a href="#news">Newsletter</a></li></ul></nav>
+  </div>
+</header>
+<main id="main">
+<section id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Made slowly, by hand, for daily use.</h1>
+      <p class="lede">Ceramics thrown on the wheel and textiles woven on a floor loom. Each piece is made to order in our small studio.</p>
+      <a class="btn" href="#shop">Browse the collection</a>
+    </div>
+    <div class="hero-art" role="img" aria-label="Illustration of a saffron-yellow vase on an indigo background">
+      <svg viewBox="0 0 160 200" width="62%" aria-hidden="true"><path d="M62 14h36l-4 22c28 14 40 40 40 70 0 40-26 72-54 72s-54-32-54-72c0-30 12-56 40-70z" fill="#F0B33B"/><path d="M40 112c30 14 80 14 80 0" stroke="#27304F" stroke-width="4" fill="none" opacity=".4"/><path d="M42 134c30 14 76 14 76 0" stroke="#27304F" stroke-width="4" fill="none" opacity=".4"/></svg>
+    </div>
+  </div>
+</section>
+
+<section id="shop" aria-labelledby="shop-h">
+  <div class="wrap">
+    <h2 id="shop-h">The collection</h2>
+    <div class="tabs" role="group" aria-label="Filter products">
+      <button aria-pressed="true" data-k="all">All</button><button aria-pressed="false" data-k="Ceramics">Ceramics</button><button aria-pressed="false" data-k="Textiles">Textiles</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="story dark" id="story" aria-labelledby="story-h">
+  <div class="wrap story-grid">
+    <div>
+      <h2 id="story-h">From clay and thread, to your table</h2>
+      <p>We keep our range small and our process honest. No factory runs, no waste, only pieces made once someone wants them.</p>
+    </div>
+    <ol class="steps">
+      <li><strong>You order</strong>Choose a piece and colour.</li>
+      <li><strong>We make it</strong>Thrown or woven by hand in the studio.</li>
+      <li><strong>We pack it</strong>Plastic-free, with a care card.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="news" aria-labelledby="news-h">
+  <div class="wrap">
+    <div class="news">
+      <h2 id="news-h">New pieces, first</h2>
+      <p>Join the list for studio updates and early access to each new batch.</p>
+      <form id="form" novalidate>
+        <label for="em" style="position:absolute;left:-999px">Email address</label>
+        <input id="em" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <button class="btn" type="submit">Join the list</button>
+      </form>
+      <p id="msg" role="status" aria-live="polite" style="margin-top:1rem"></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">© Hearth &amp; Hand. Concept design by GreenVibe Labs. All products, prices and details on this page are sample content.</div></footer>
+
+<script>
+/* Sample catalogue (concept content) */
+const items=[
+ {n:"Stoneware mug",k:"Ceramics",d:"Speckled glaze, 350 ml",p:32,bg:"#E7C9A0",f:"#27304F",s:"mug"},
+ {n:"Serving bowl",k:"Ceramics",d:"Hand-thrown, food safe",p:58,bg:"#D5DCEB",f:"#8C4B33",s:"bowl"},
+ {n:"Bud vase",k:"Ceramics",d:"Matte saffron glaze",p:44,bg:"#27304F",f:"#F0B33B",s:"vase"},
+ {n:"Woven table runner",k:"Textiles",d:"Cotton and linen",p:72,bg:"#EBD9B4",f:"#27304F",s:"cloth"},
+ {n:"Plate set of two",k:"Ceramics",d:"Indigo rim, dishwasher safe",p:64,bg:"#F3D9CF",f:"#27304F",s:"plate"},
+ {n:"Throw blanket",k:"Textiles",d:"Wool blend, 130 x 180 cm",p:140,bg:"#DDE3D0",f:"#8C4B33",s:"cloth"},
+ {n:"Tea bowl",k:"Ceramics",d:"Fits the hand, no handle",p:28,bg:"#F0B33B",f:"#27304F",s:"bowl"},
+ {n:"Coaster set of four",k:"Textiles",d:"Hand-woven cotton",p:30,bg:"#E8DCC6",f:"#8C4B33",s:"cloth"}
+];
+const shape=i=>({
+ mug:`<path d="M30 40h70v70q0 20-20 20H50q-20 0-20-20z" fill="${i.f}"/><path d="M100 54h12q14 0 14 18t-14 18h-12" stroke="${i.f}" stroke-width="8" fill="none"/>`,
+ bowl:`<path d="M16 60h128q0 60-64 60T16 60z" fill="${i.f}"/><rect x="12" y="54" width="136" height="10" rx="5" fill="${i.f}" opacity=".7"/>`,
+ vase:`<path d="M66 16h28l-4 24c24 10 34 30 34 56 0 28-20 42-44 42s-44-14-44-42c0-26 10-46 34-56z" fill="${i.f}"/>`,
+ plate:`<ellipse cx="80" cy="80" rx="64" ry="64" fill="${i.f}" opacity=".9"/><circle cx="80" cy="80" r="44" fill="${i.bg}"/>`,
+ cloth:`<rect x="14" y="28" width="132" height="104" rx="6" fill="${i.f}"/>${[0,1,2,3,4].map(n=>`<rect x="14" y="${40+n*20}" width="132" height="8" fill="${i.bg}" opacity=".75"/>`).join('')}`
+}[i.s]);
+const grid=document.getElementById('grid');
+grid.innerHTML=items.map(i=>`<article class="item" data-k="${i.k}"><div class="pic" style="background:${i.bg}"><svg viewBox="0 0 160 150" aria-hidden="true">${shape(i)}</svg></div><h3>${i.n}</h3><p>${i.d}</p><p class="pr">$${i.p}</p></article>`).join('');
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  grid.querySelectorAll('.item').forEach(c=>c.hidden=!(b.dataset.k==='all'||c.dataset.k===b.dataset.k));
+}));
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();
+  document.getElementById('msg').textContent=/^\S+@\S+\.\S+$/.test(document.getElementById('em').value)?'Thank you! This is a concept demo, so nothing was saved.':'Please enter a valid email address.';});
+</script>
+</body>
+</html>

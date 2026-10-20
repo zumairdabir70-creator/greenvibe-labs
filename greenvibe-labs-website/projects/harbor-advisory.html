@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harbor Advisory | Operations consulting for small businesses</title>
+<meta name="description" content="Harbor Advisory helps owner-run businesses fix messy operations, hire with confidence and grow steadily. Book a free 30-minute call. Concept design by GreenVibe Labs.">
+<meta property="og:title" content="Harbor Advisory">
+<meta property="og:description" content="Calm, practical operations help for owner-run businesses.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230E2A47'/%3E%3Cpath d='M20 62q15-14 30 0t30 0' stroke='%23FF7A3D' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF2F5;--navy:#0E2A47;--orange:#FF7A3D;--orange-d:#B8470F;--card:#fff;--muted:#4C5E70;--line:#0E2A4722;--f:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:#13243A;font:400 1.05rem/1.65 var(--f)}
+h1,h2,h3{margin:0 0 .5em;color:var(--navy);line-height:1.1;letter-spacing:-.025em;font-weight:800}
+h1{font-size:clamp(2.4rem,6.5vw,4.4rem)}
+h2{font-size:clamp(1.8rem,4vw,2.7rem)}
+h3{font-size:1.2rem;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding-block:clamp(3.5rem,8vw,6rem)}
+:focus-visible{outline:3px solid var(--orange-d);outline-offset:3px;border-radius:6px}
+.dark :focus-visible{outline-color:var(--orange)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--navy);color:#fff;padding:.6rem 1rem;z-index:200}.skip:focus{left:8px}
+header{position:sticky;top:0;z-index:50;background:#EEF2F5F2;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.logo{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.2rem;color:var(--navy);text-decoration:none}
+.logo svg{width:30px}
+nav ul{display:none;gap:1.6rem;list-style:none;margin:0;padding:0}
+nav a{color:var(--navy);font-weight:600;text-decoration:none}
+@media(min-width:800px){nav ul{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.8rem 1.6rem;background:var(--orange);color:var(--navy);border:0;border-radius:12px;font:800 1rem var(--f);text-decoration:none;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn[disabled]{opacity:.5;cursor:not-allowed;transform:none}
+.hero-grid{display:grid;gap:2.5rem;align-items:start}
+.hero p.lede{font-size:1.2rem;color:var(--muted);max-width:46ch}
+.points{list-style:none;margin:1.4rem 0 0;padding:0;display:grid;gap:.5rem}
+.points li::before{content:"";display:inline-block;width:.7rem;height:.7rem;background:var(--orange);border-radius:50%;margin-right:.7rem}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr}}
+.book{background:var(--card);border-radius:24px;padding:1.6rem;box-shadow:0 20px 50px -25px #0E2A4766}
+.book h2{font-size:1.5rem;margin-bottom:.2em}
+.book fieldset{border:0;margin:1rem 0 0;padding:0}
+.book legend{font-weight:700;margin-bottom:.5rem;color:var(--navy);padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips label{border:2px solid var(--navy);border-radius:10px;min-height:44px;padding:.45rem .9rem;font-weight:700;font-size:.95rem;cursor:pointer;display:inline-flex;align-items:center;color:var(--navy)}
+.chips input:checked+label{background:var(--navy);color:#fff}
+.chips input:focus-visible+label{outline:3px solid var(--orange-d);outline-offset:2px}
+.book .f{margin-top:1rem}
+.book .f label{display:block;font-weight:700;margin-bottom:.3rem;color:var(--navy)}
+.book input[type=text],.book input[type=email]{width:100%;min-height:48px;border:2px solid var(--line);border-radius:10px;padding:.6rem .9rem;font:inherit}
+.book .btn{width:100%;margin-top:1.2rem}
+#sum{font-weight:700;color:var(--navy);margin:1rem 0 0;min-height:1.6rem}
+.cards{display:grid;gap:1.25rem;margin-top:2rem}
+@media(min-width:800px){.cards{grid-template-columns:repeat(3,1fr)}}
+.cards article{background:var(--card);border-radius:20px;padding:1.6rem;border-top:5px solid var(--orange)}
+.cards p{color:var(--muted);margin:0}
+.how{background:var(--navy);color:#DCE6F0}
+.how h2{color:#fff}
+.how ol{list-style:none;counter-reset:s;padding:0;margin:2rem 0 0;display:grid;gap:1.5rem}
+.how li{counter-increment:s;position:relative;padding-left:3.4rem}
+.how li::before{content:counter(s);position:absolute;left:0;top:0;width:2.5rem;height:2.5rem;border-radius:50%;background:var(--orange);color:var(--navy);font-weight:800;display:grid;place-items:center}
+.how strong{display:block;color:#fff;font-size:1.15rem}
+@media(min-width:900px){.how ol{grid-template-columns:repeat(3,1fr)}}
+details{background:var(--card);border-radius:14px;margin-bottom:.7rem;padding:0 1.3rem}
+summary{cursor:pointer;font-weight:700;color:var(--navy);padding:1.1rem 0;min-height:48px}
+details p{color:var(--muted)}
+footer{background:#0A2037;color:#AFC0D2;padding-block:2rem;font-size:.9rem}
+footer a{color:#fff}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#0E2A47"/><path d="M20 62q15-14 30 0t30 0" stroke="#FF7A3D" stroke-width="9" fill="none" stroke-linecap="round"/></svg>Harbor Advisory</a>
+    <nav aria-label="Main"><ul><li><a href="#help">How I help</a></li><li><a href="#how">Process</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
+    <a class="btn" href="#book" style="min-height:44px;padding:.5rem 1.1rem">Book a call</a>
+  </div>
+</header>
+<main id="main">
+<section id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Steady operations for owner-run businesses.</h1>
+      <p class="lede">I help small teams untangle messy processes, hire with confidence and grow without the chaos. Practical advice, no jargon, and a plan you can actually follow.</p>
+      <ul class="points"><li>Free 30-minute intro call</li><li>Fixed-price engagements</li><li>Plain-English reports</li></ul>
+    </div>
+    <div class="book" id="book">
+      <h2>Book a free intro call</h2>
+      <p style="color:var(--muted);margin:0">Pick a time that suits you. No pressure, no sales pitch.</p>
+      <form id="form" novalidate>
+        <fieldset><legend>Choose a day</legend><div class="chips" id="days"></div></fieldset>
+        <fieldset><legend>Choose a time</legend><div class="chips" id="times"></div></fieldset>
+        <div class="f"><label for="nm">Your name</label><input id="nm" type="text" autocomplete="name" required></div>
+        <div class="f"><label for="em">Email</label><input id="em" type="email" autocomplete="email" required></div>
+        <p id="sum" role="status" aria-live="polite"></p>
+        <button class="btn" type="submit">Confirm request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="help" aria-labelledby="help-h" style="padding-top:1rem">
+  <div class="wrap">
+    <h2 id="help-h">Where I can help</h2>
+    <div class="cards">
+      <article><h3>Fix the process</h3><p>Map how work really flows, remove the bottlenecks, and write simple procedures your team will use.</p></article>
+      <article><h3>Hire and onboard</h3><p>Define the role, structure fair interviews, and set up a first-90-days plan for new hires.</p></article>
+      <article><h3>Plan the growth</h3><p>Set clear priorities, simple numbers to track, and a calm quarterly rhythm for decisions.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="how dark" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <h2 id="how-h">How we'd work together</h2>
+    <ol>
+      <li><strong>Discover</strong>A short call, then a review of how your business runs today.</li>
+      <li><strong>Recommend</strong>A clear written plan with priorities, costs and a timeline.</li>
+      <li><strong>Implement</strong>I work alongside you and your team until the changes stick.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-h">
+  <div class="wrap" style="max-width:820px">
+    <h2 id="faq-h">Common questions</h2>
+    <details><summary>Who do you work with?</summary><p>Owner-run businesses with roughly 3 to 40 people, across retail, services and light manufacturing.</p></details>
+    <details><summary>How much does it cost?</summary><p>Engagements are fixed-price and quoted after the intro call, so you always know the cost up front. [PLACEHOLDER: add your rates or ranges]</p></details>
+    <details><summary>Do you work remotely?</summary><p>Yes. Most work happens over video and shared documents, with on-site days when they add value.</p></details>
+    <details><summary>What happens after the intro call?</summary><p>If we are a good fit, I send a short proposal within two working days. If not, I will point you to someone better suited.</p></details>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">© Harbor Advisory. Concept design by GreenVibe Labs. All services, names and details on this page are sample content. Contact: <a href="mailto:hello@harboradvisory.example">hello@harboradvisory.example</a></div></footer>
+
+<script>
+/* Builds the next 5 weekdays + time slots (sample slots; connect Calendly, Cal.com or your own calendar for real booking) */
+const days=document.getElementById('days'),times=document.getElementById('times'),sum=document.getElementById('sum');
+const times_=["9:30 am","11:00 am","1:30 pm","3:00 pm"];
+let d=new Date(),n=0,html='';
+while(n<5){d.setDate(d.getDate()+1);if(d.getDay()%6===0)continue;
+  const label=d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+  html+=`<input type="radio" name="day" id="d${n}" value="${label}"${n===0?' checked':''}><label for="d${n}">${label}</label>`;n++;}
+days.innerHTML=html;
+times.innerHTML=times_.map((t,i)=>`<input type="radio" name="time" id="t${i}" value="${t}"${i===0?' checked':''}><label for="t${i}">${t}</label>`).join('');
+const pick=n=>document.querySelector(`input[name="${n}"]:checked`).value;
+const show=()=>sum.textContent=`Selected: ${pick('day')} at ${pick('time')}`;
+document.getElementById('form').addEventListener('change',show);show();
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();
+  const ok=document.getElementById('nm').value.trim()&&/^\S+@\S+\.\S+$/.test(document.getElementById('em').value);
+  sum.textContent=ok?`Request noted for ${pick('day')} at ${pick('time')}. This is a concept demo, so nothing was sent.`:'Please add your name and a valid email.';});
+</script>
+</body>
+</html>

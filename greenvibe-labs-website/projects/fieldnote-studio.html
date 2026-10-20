@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fieldnote Studio | Brand identity and packaging for small brands</title>
+<meta name="description" content="Fieldnote Studio designs brand identities, packaging and websites for independent food, drink and craft brands. Concept design by GreenVibe Labs.">
+<meta property="og:title" content="Fieldnote Studio">
+<meta property="og:description" content="We make small brands look inevitable.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232433E0'/%3E%3Ccircle cx='50' cy='50' r='24' fill='%23D7FF3F'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F3EE;--blue:#2433E0;--lime:#D7FF3F;--ink:#10121F;--muted:#4A4E66;--f:"Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.05rem/1.6 var(--f)}
+h1,h2,h3{margin:0 0 .4em;line-height:.98;letter-spacing:-.035em;font-weight:700}
+h1{font-size:clamp(3rem,11.5vw,9.5rem)}
+h2{font-size:clamp(2rem,6vw,4.2rem)}
+h3{font-size:1.3rem;letter-spacing:-.01em;line-height:1.2}
+p{margin:0 0 1em;max-width:56ch}
+.wrap{width:min(1240px,100% - 2.5rem);margin-inline:auto}
+section{padding-block:clamp(3.5rem,9vw,7rem)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.on-blue :focus-visible{outline-color:var(--lime)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--lime);color:var(--ink);padding:.6rem 1rem;z-index:200}.skip:focus{left:8px}
+header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:2px solid var(--ink)}
+.bar{display:flex;justify-content:space-between;align-items:center;min-height:62px}
+.logo{font-weight:700;font-size:1.2rem;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:.5rem}
+.logo i{width:18px;height:18px;border-radius:50%;background:var(--blue);display:inline-block}
+nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0}
+nav a{color:var(--ink);font-weight:500;text-decoration:none;padding:.5rem 0;display:inline-block}
+nav a:hover{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:560px){nav li:nth-child(n+3){display:none}}
+.hero{padding-block:clamp(2.5rem,6vw,5rem) clamp(3rem,7vw,5rem)}
+.hero h1 span{background:var(--lime);padding:0 .1em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero-foot{display:grid;gap:1.5rem;margin-top:2.5rem;align-items:end}
+.hero-foot p{font-size:1.2rem;color:var(--muted);margin:0}
+@media(min-width:800px){.hero-foot{grid-template-columns:1.2fr .8fr}}
+.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:52px;padding:.8rem 1.6rem;border-radius:999px;background:var(--blue);color:#fff;text-decoration:none;font:700 1.05rem var(--f);border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateX(4px)}
+.btn.lime{background:var(--lime);color:var(--ink)}
+.marquee{background:var(--ink);color:var(--lime);overflow:hidden;white-space:nowrap;padding-block:.9rem;font-weight:700;font-size:1.1rem}
+.marquee div{display:inline-block;animation:slide 24s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+.work-list{list-style:none;margin:2rem 0 0;padding:0;border-top:2px solid var(--ink)}
+.work-list li{border-bottom:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1.2rem;align-items:center;padding:1.3rem .3rem;transition:background .2s,padding .2s}
+.row:hover{background:var(--lime);padding-left:1rem}
+.row .num{font-weight:500;color:var(--muted)}
+.row h3{font-size:clamp(1.5rem,4vw,2.6rem);margin:0;letter-spacing:-.03em}
+.row p{grid-column:2;margin:0;color:var(--muted)}
+.swatches{display:flex;gap:.35rem;grid-column:2;margin-top:.3rem}
+.swatches i{width:28px;height:28px;border-radius:50%;border:2px solid var(--ink)}
+.services{background:var(--blue);color:#fff}
+.services h2{color:#fff}
+.srv{display:grid;gap:1.5rem;margin-top:2.5rem}
+@media(min-width:800px){.srv{grid-template-columns:repeat(3,1fr)}}
+.srv div{border:2px solid #fff;border-radius:22px;padding:1.6rem}
+.srv h3{color:var(--lime)}
+.srv ul{padding-left:1.1rem;margin:.8rem 0 0}
+.contact{text-align:left}
+.contact h2{font-size:clamp(2.4rem,9vw,7rem)}
+.contact a.mail{color:var(--blue);font-weight:700;font-size:clamp(1.3rem,4vw,2.2rem);text-underline-offset:6px}
+footer{border-top:2px solid var(--ink);padding-block:1.6rem;font-size:.9rem;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){.marquee div{animation:none}*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top"><i aria-hidden="true"></i>Fieldnote</a>
+    <nav aria-label="Main"><ul><li><a href="#work">Work</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Say hello</a></li></ul></nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <h1>We make small brands look <span>inevitable.</span></h1>
+    <div class="hero-foot">
+      <p>Fieldnote is a brand and packaging studio for independent food, drink and craft businesses. Strategy, identity and a website that finally matches the quality of what you make.</p>
+      <div><a class="btn" href="#contact">Start a project <span aria-hidden="true">→</span></a></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div>Brand identity ✦ Packaging ✦ Websites ✦ Brand identity ✦ Packaging ✦ Websites ✦ Brand identity ✦ Packaging ✦ Websites ✦ Brand identity ✦ Packaging ✦ Websites ✦ </div></div>
+
+<section id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <h2 id="work-h">Recent work</h2>
+    <ul class="work-list">
+      <li><div class="row"><span class="num">01</span><h3>Salt &amp; Ember</h3><p>Hot sauce brand: identity and bottle label system</p><div class="swatches" role="img" aria-label="Palette: red, cream, black"><i style="background:#D63A1F"></i><i style="background:#F7E8D0"></i><i style="background:#111"></i></div></div></li>
+      <li><div class="row"><span class="num">02</span><h3>Tidewater Coffee</h3><p>Roaster rebrand, bag packaging and a new online shop</p><div class="swatches" role="img" aria-label="Palette: navy, sand, teal"><i style="background:#14284B"></i><i style="background:#E8D9B5"></i><i style="background:#2E9C95"></i></div></div></li>
+      <li><div class="row"><span class="num">03</span><h3>Moss &amp; Marrow</h3><p>Small-batch skincare: naming, identity and carton design</p><div class="swatches" role="img" aria-label="Palette: moss green, blush, ink"><i style="background:#5E7A3B"></i><i style="background:#F0CFC4"></i><i style="background:#1B1B1B"></i></div></div></li>
+      <li><div class="row"><span class="num">04</span><h3>Pinewood Taproom</h3><p>Craft brewery: logo, can art and website</p><div class="swatches" role="img" aria-label="Palette: amber, forest, cream"><i style="background:#E08A1E"></i><i style="background:#1E4A36"></i><i style="background:#F6EEDC"></i></div></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="services on-blue" id="services" aria-labelledby="srv-h">
+  <div class="wrap">
+    <h2 id="srv-h">What we do</h2>
+    <div class="srv">
+      <div><h3>Brand identity</h3><p>A clear idea, then the logo, colour and voice to carry it.</p><ul><li>Positioning workshop</li><li>Logo and visual system</li><li>Brand guidelines</li></ul></div>
+      <div><h3>Packaging</h3><p>Labels and boxes that stand out on a crowded shelf.</p><ul><li>Label and carton design</li><li>Print-ready files</li><li>Printer liaison</li></ul></div>
+      <div><h3>Websites</h3><p>Fast, simple sites that sell what you make.</p><ul><li>Design and build</li><li>Online shop setup</li><li>Handover and training</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="c-h">
+  <div class="wrap">
+    <h2 id="c-h">Got something worth making look good?</h2>
+    <p>Tell us a little about your brand. We reply within two working days.</p>
+    <p><a class="mail" href="mailto:hello@fieldnote.example">hello@fieldnote.example</a></p>
+    <a class="btn lime" style="background:var(--ink);color:var(--lime)" href="mailto:hello@fieldnote.example?subject=New%20project">Start a project <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">© Fieldnote Studio. Concept design by GreenVibe Labs. All clients, projects and details on this page are sample content.</div></footer>
+</body>
+</html>

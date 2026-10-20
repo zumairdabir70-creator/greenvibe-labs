@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leafwork Plant Co. | Easy-care houseplants delivered to your door</title>
+<meta name="description" content="Leafwork Plant Co. sells hardy, easy-care houseplants with clear care guides and fast delivery. Concept design by GreenVibe Labs.">
+<meta property="og:title" content="Leafwork Plant Co.">
+<meta property="og:description" content="Plants that forgive you. Easy-care houseplants delivered to your door.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🪴%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F3EA;--forest:#1F3D2B;--leaf:#3F7D4E;--coral:#F2704F;--coral-d:#B9421F;--ink:#1B2A21;--muted:#4D5E52;--card:#fff;--head:"Bricolage Grotesque",system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 var(--body)}
+h1,h2,h3{font-family:var(--head);line-height:1.08;margin:0 0 .5em;color:var(--forest)}
+h1{font-size:clamp(2.6rem,8vw,5rem);font-weight:800;letter-spacing:-.03em}
+h2{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:800;letter-spacing:-.02em}
+h3{font-size:1.15rem;font-weight:600;margin-bottom:.15em}
+p{margin:0 0 1em}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding-block:clamp(3.5rem,8vw,6rem)}
+:focus-visible{outline:3px solid var(--coral-d);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--forest);color:#fff;padding:.6rem 1rem;z-index:200}.skip:focus{left:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;border:0;background:var(--coral);color:var(--ink);font:700 1rem var(--body);text-decoration:none;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.dark{background:var(--forest);color:#fff}
+header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid #1f3d2b22}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:1rem}
+.logo{font:800 1.35rem var(--head);color:var(--forest);text-decoration:none}
+.logo span{color:var(--coral-d)}
+nav ul{display:none;list-style:none;margin:0;padding:0;gap:1.6rem}
+nav a{text-decoration:none;font-weight:600;color:var(--forest)}
+.cart-btn{background:var(--forest);color:#fff;border:0;border-radius:999px;min-height:44px;padding:.5rem 1.1rem;font:700 .95rem var(--body);cursor:pointer}
+@media(min-width:760px){nav ul{display:flex}}
+.hero{padding-block:clamp(2.5rem,6vw,5rem)}
+.hero-grid{display:grid;gap:2rem;align-items:center}
+.hero p.lede{font-size:1.2rem;color:var(--muted);max-width:44ch}
+.perks{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin:1.4rem 0 0;padding:0;list-style:none;color:var(--muted);font-size:.95rem;font-weight:600}
+.hero-art{background:var(--forest);border-radius:36px 36px 120px 36px;padding:1.5rem;aspect-ratio:1/1;max-width:460px;justify-self:center;width:100%}
+@media(min-width:860px){.hero-grid{grid-template-columns:1.1fr .9fr}}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0 2rem}
+.filters button{border:2px solid var(--forest);background:none;color:var(--forest);border-radius:999px;min-height:44px;padding:.4rem 1.1rem;font:600 .95rem var(--body);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--forest);color:#fff}
+.grid{display:grid;gap:1.25rem;grid-template-columns:1fr 1fr}
+@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.card .pic{aspect-ratio:1/1;display:grid;place-items:end center;padding:1rem}
+.card .pic svg{width:78%}
+.card .info{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.15rem;flex:1}
+.card small{color:var(--muted)}
+.price{font-weight:800;color:var(--forest);margin-top:auto;padding-top:.6rem;display:flex;justify-content:space-between;align-items:center}
+.add{background:var(--coral);border:0;border-radius:999px;min-height:44px;padding:.4rem 1rem;font:700 .9rem var(--body);cursor:pointer;color:var(--ink)}
+.care{background:var(--forest);color:#EAF1E6}
+.care h2{color:#fff}
+.care-grid{display:grid;gap:1.5rem;margin-top:2rem}
+.care-grid div{border-top:3px solid var(--coral);padding-top:1rem}
+.care-grid h3{color:#fff}
+@media(min-width:760px){.care-grid{grid-template-columns:repeat(3,1fr)}}
+form.news{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.news input{flex:1 1 220px;min-height:48px;padding:.6rem 1rem;border-radius:999px;border:2px solid var(--forest);font:inherit;background:#fff}
+footer{background:#14281D;color:#B8C7BC;padding-block:2rem;font-size:.9rem}
+.toast{position:fixed;left:50%;bottom:1.2rem;transform:translateX(-50%);background:var(--forest);color:#fff;padding:.7rem 1.2rem;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .25s}
+.toast.show{opacity:1}
+dialog{border:0;border-radius:24px;padding:1.5rem;width:min(440px,92vw)}
+dialog::backdrop{background:#0008}
+dialog ul{list-style:none;margin:1rem 0;padding:0}
+dialog li{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid #0001}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Leaf<span>work</span></a>
+    <nav aria-label="Main"><ul><li><a href="#shop">Shop</a></li><li><a href="#care">Care guides</a></li><li><a href="#join">Newsletter</a></li></ul></nav>
+    <button class="cart-btn" id="open-cart" aria-haspopup="dialog">Cart (<span id="count">0</span>)</button>
+  </div>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Plants that forgive you.</h1>
+      <p class="lede">Hardy, easy-care houseplants for busy people. Every order ships with a simple care card, so your plant thrives from day one.</p>
+      <a class="btn" href="#shop">Shop the plants</a>
+      <ul class="perks"><li>Free delivery over $50</li><li>30-day plant guarantee</li><li>Pet-friendly picks</li></ul>
+    </div>
+    <div class="hero-art" role="img" aria-label="Illustration of a leafy plant in a coral pot">
+      <svg viewBox="0 0 200 200" width="100%" height="100%"><circle cx="100" cy="96" r="78" fill="#2B5A3C"/><path d="M100 150 C98 110 104 80 100 44" stroke="#8CCB8F" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M100 120C70 112 54 90 56 66 82 70 100 92 100 120Z" fill="#6FB373"/><path d="M100 100C130 94 146 74 144 50 118 54 100 76 100 100Z" fill="#A5DCA0"/><path d="M100 80C80 74 70 58 72 40 90 44 100 60 100 80Z" fill="#6FB373"/><path d="M68 150h64l-8 38H76z" fill="#F2704F"/><rect x="64" y="144" width="72" height="12" rx="5" fill="#F58C70"/></svg>
+    </div>
+  </div>
+</section>
+
+<section id="shop" aria-labelledby="shop-h">
+  <div class="wrap">
+    <h2 id="shop-h">Shop easy-care plants</h2>
+    <div class="filters" role="group" aria-label="Filter plants">
+      <button aria-pressed="true" data-f="all">All</button>
+      <button aria-pressed="false" data-f="low">Low light</button>
+      <button aria-pressed="false" data-f="pet">Pet-friendly</button>
+      <button aria-pressed="false" data-f="bright">Bright light</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="care" id="care" aria-labelledby="care-h">
+  <div class="wrap">
+    <h2 id="care-h">Care, made simple</h2>
+    <div class="care-grid">
+      <div><h3>Pick by light</h3><p>Tell us how bright your space is and we will match plants that suit it.</p></div>
+      <div><h3>Water on a schedule</h3><p>Opt in to friendly reminder emails sent when your plant is due a drink.</p></div>
+      <div><h3>Ask a plant person</h3><p>Reply to any order email and a real human will help with leaf or soil worries.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="join" aria-labelledby="join-h">
+  <div class="wrap">
+    <h2 id="join-h">Get a care tip every Friday</h2>
+    <p>Short, useful, and never spammy.</p>
+    <form class="news" id="news" novalidate>
+      <label for="em" class="sr" style="position:absolute;left:-999px">Email address</label>
+      <input id="em" type="email" placeholder="you@example.com" autocomplete="email" required>
+      <button class="btn dark" type="submit">Subscribe</button>
+    </form>
+    <p id="news-msg" role="status" aria-live="polite"></p>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">© Leafwork Plant Co. Concept design by GreenVibe Labs. All products, prices and details on this page are sample content.</div></footer>
+
+<dialog id="cart" aria-labelledby="cart-h">
+  <h2 id="cart-h" style="font-size:1.6rem">Your cart</h2>
+  <ul id="cart-list"></ul>
+  <p><strong>Total: $<span id="total">0</span></strong></p>
+  <button class="btn dark" id="close-cart" type="button">Keep shopping</button>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* Sample catalogue (concept content) */
+const plants=[
+ {id:1,n:"Snake plant",s:"Low light, forgiving",p:28,t:["low","pet0"],c:"#CFE3C6",h:"#3F7D4E"},
+ {id:2,n:"Money tree",s:"Bright, indirect light",p:36,t:["bright","pet"],c:"#F7D9C9",h:"#4C8F5A"},
+ {id:3,n:"Pothos",s:"Low to medium light",p:22,t:["low"],c:"#E6EBC4",h:"#5E9E4F"},
+ {id:4,n:"Spider plant",s:"Pet-friendly, easy",p:20,t:["pet","low"],c:"#D5E4EE",h:"#3F8A57"},
+ {id:5,n:"Rubber plant",s:"Bright light",p:42,t:["bright"],c:"#F3E3B8",h:"#2F6B45"},
+ {id:6,n:"Parlor palm",s:"Pet-friendly, low light",p:34,t:["pet","low"],c:"#E9D5E6",h:"#4A9A5E"}
+];
+const grid=document.getElementById('grid');
+const art=p=>`<svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 82C58 60 62 40 60 20" stroke="${p.h}" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M60 66C40 62 30 48 32 34 48 38 60 50 60 66Z" fill="${p.h}"/><path d="M60 52C78 48 88 36 86 22 70 26 60 38 60 52Z" fill="${p.h}" opacity=".8"/><path d="M38 82h44l-6 28H44z" fill="#F2704F"/><rect x="35" y="78" width="50" height="8" rx="4" fill="#F58C70"/></svg>`;
+grid.innerHTML=plants.map(p=>`<article class="card" data-t="${p.t.join(' ')}"><div class="pic" style="background:${p.c}">${art(p)}</div><div class="info"><h3>${p.n}</h3><small>${p.s}</small><div class="price"><span>$${p.p}</span><button class="add" data-id="${p.id}" aria-label="Add ${p.n} to cart">Add</button></div></div></article>`).join('');
+
+/* Filtering */
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  const f=b.dataset.f;
+  grid.querySelectorAll('.card').forEach(c=>c.hidden=!(f==='all'||c.dataset.t.split(' ').includes(f)));
+}));
+
+/* Cart */
+const cart=[],$=id=>document.getElementById(id),dlg=$('cart');
+function render(){
+  $('count').textContent=cart.length;
+  $('cart-list').innerHTML=cart.length?cart.map(p=>`<li><span>${p.n}</span><span>$${p.p}</span></li>`).join(''):'<li>Your cart is empty.</li>';
+  $('total').textContent=cart.reduce((a,p)=>a+p.p,0);
+}
+grid.addEventListener('click',e=>{
+  const b=e.target.closest('.add');if(!b)return;
+  const p=plants.find(x=>x.id==b.dataset.id);cart.push(p);render();
+  const t=$('toast');t.textContent=p.n+' added to cart';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800);
+});
+$('open-cart').onclick=()=>dlg.showModal();$('close-cart').onclick=()=>dlg.close();render();
+
+/* Newsletter (connect to your email service) */
+$('news').addEventListener('submit',e=>{e.preventDefault();
+  $('news-msg').textContent=/^\S+@\S+\.\S+$/.test($('em').value)?'Thanks! This is a concept demo, so nothing was sent.':'Please enter a valid email address.';});
+</script>
+</body>
+</html>

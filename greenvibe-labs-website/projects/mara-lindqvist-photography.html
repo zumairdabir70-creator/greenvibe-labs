@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mara Lindqvist Photography | Weddings, travel and portraits</title>
+<meta name="description" content="Portfolio of Mara Lindqvist, a photographer for weddings, travel and portraits. Concept design by GreenVibe Labs.">
+<meta property="og:title" content="Mara Lindqvist Photography">
+<meta property="og:description" content="Quiet, honest photographs of people and places.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📷%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0F0E0D;--panel:#1A1816;--text:#EFE9DF;--muted:#B5ADA0;--amber:#E8A94B;--serif:"Instrument Serif",Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.05rem/1.7 var(--sans)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;margin:0 0 .4em}
+h1{font-size:clamp(3.2rem,11vw,8.5rem);letter-spacing:-.02em}
+h1 em,h2 em{color:var(--amber)}
+h2{font-size:clamp(2.2rem,6vw,4rem)}
+h3{font-size:1.6rem}
+p{margin:0 0 1em;max-width:58ch}
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+section{padding-block:clamp(3.5rem,9vw,7rem)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--amber);color:#111;padding:.6rem 1rem;z-index:200}.skip:focus{left:8px}
+header{position:sticky;top:0;z-index:50;background:#0F0E0DEE;backdrop-filter:blur(8px)}
+.bar{display:flex;justify-content:space-between;align-items:center;min-height:66px}
+.logo{font:1.5rem var(--serif);color:var(--text);text-decoration:none}
+nav ul{display:flex;gap:1.3rem;list-style:none;margin:0;padding:0;font-size:.95rem}
+nav a{color:var(--muted);text-decoration:none;padding:.5rem 0;display:inline-block}
+nav a:hover{color:var(--amber)}
+.hero{padding-block:clamp(3rem,8vw,6rem) 3rem}
+.hero p{color:var(--muted);font-size:1.15rem}
+.link{display:inline-block;color:var(--amber);text-decoration:none;border-bottom:1px solid var(--amber);padding-bottom:2px;font-weight:600}
+.cats{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0 2rem}
+.cats button{background:none;border:1px solid #ffffff33;color:var(--text);border-radius:999px;min-height:44px;padding:.3rem 1.1rem;font:500 .95rem var(--sans);cursor:pointer}
+.cats button[aria-pressed="true"]{background:var(--amber);color:#111;border-color:var(--amber)}
+.gallery{columns:1;column-gap:1rem}
+@media(min-width:600px){.gallery{columns:2}}
+@media(min-width:960px){.gallery{columns:3}}
+.shot{display:block;width:100%;margin:0 0 1rem;padding:0;border:0;background:none;cursor:zoom-in;break-inside:avoid;position:relative;border-radius:6px;overflow:hidden}
+.shot svg{display:block;width:100%;height:auto;transition:transform .5s}
+.shot:hover svg{transform:scale(1.04)}
+.shot span{position:absolute;left:0;right:0;bottom:0;padding:1.5rem .9rem .7rem;background:linear-gradient(transparent,#000A);font:1.15rem var(--serif);text-align:left;color:#fff;opacity:0;transition:opacity .3s}
+.shot:hover span,.shot:focus-visible span{opacity:1}
+.about-grid,.contact-grid{display:grid;gap:2.5rem}
+@media(min-width:860px){.about-grid{grid-template-columns:.8fr 1.2fr}.contact-grid{grid-template-columns:1fr 1fr}}
+.portrait{background:linear-gradient(160deg,#3A2E22,#8A5E32 60%,#E8A94B);border-radius:200px 200px 8px 8px;aspect-ratio:3/4;max-width:360px;width:100%}
+.pkgs{display:grid;gap:1rem;margin-top:1.5rem}
+@media(min-width:760px){.pkgs{grid-template-columns:repeat(3,1fr)}}
+.pkg{background:var(--panel);padding:1.5rem;border-radius:10px;border-top:3px solid var(--amber)}
+.pkg p{color:var(--muted);margin:0;font-size:.98rem}
+form{display:grid;gap:1rem}
+label{display:block;margin-bottom:.3rem;font-weight:600;font-size:.95rem}
+input,select,textarea{width:100%;background:var(--panel);color:var(--text);border:1px solid #ffffff33;border-radius:8px;padding:.8rem 1rem;font:inherit}
+textarea{min-height:130px}
+.btn{background:var(--amber);color:#111;border:0;border-radius:999px;min-height:48px;padding:.8rem 1.6rem;font:700 1rem var(--sans);cursor:pointer;justify-self:start}
+footer{border-top:1px solid #ffffff22;padding-block:2rem;color:var(--muted);font-size:.9rem}
+dialog{background:var(--panel);color:var(--text);border:0;border-radius:12px;padding:1rem;width:min(780px,94vw)}
+dialog::backdrop{background:#000D}
+dialog svg{width:100%;height:auto;max-height:70vh;border-radius:6px}
+dialog .cap{display:flex;justify-content:space-between;align-items:center;margin-top:.8rem;gap:1rem}
+dialog button{background:var(--amber);color:#111;border:0;border-radius:999px;min-height:44px;padding:.4rem 1.2rem;font:700 .95rem var(--sans);cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Mara Lindqvist</a>
+    <nav aria-label="Main"><ul><li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a href="#contact">Enquire</a></li></ul></nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <h1>Quiet light,<br><em>honest</em> moments.</h1>
+    <p>Photographer for weddings, travel and portraits. Based in Portland, available worldwide.</p>
+    <a class="link" href="#work">See the work</a>
+  </div>
+</section>
+
+<section id="work" style="padding-top:1rem" aria-labelledby="work-h">
+  <div class="wrap">
+    <h2 id="work-h" class="sr" style="position:absolute;left:-999px">Selected work</h2>
+    <div class="cats" role="group" aria-label="Filter by category">
+      <button aria-pressed="true" data-c="all">All</button><button aria-pressed="false" data-c="Weddings">Weddings</button><button aria-pressed="false" data-c="Travel">Travel</button><button aria-pressed="false" data-c="Portraits">Portraits</button>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<section id="about" aria-labelledby="about-h" style="background:#14120F">
+  <div class="wrap about-grid">
+    <div class="portrait" role="img" aria-label="Placeholder portrait of the photographer"></div>
+    <div>
+      <h2 id="about-h">Hello, I'm <em>Mara.</em></h2>
+      <p>I photograph people the way they are when they forget the camera is there. No stiff poses, no rushed schedules, just an unhurried day and pictures you will want to keep.</p>
+      <div class="pkgs">
+        <div class="pkg"><h3>Weddings</h3><p>Full-day or elopement coverage with a private online gallery.</p></div>
+        <div class="pkg"><h3>Portraits</h3><p>Relaxed sessions for families, couples and creatives.</p></div>
+        <div class="pkg"><h3>Travel</h3><p>Editorial stories for brands, hotels and magazines.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" aria-labelledby="contact-h">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 id="contact-h">Let's make <em>something</em> lovely.</h2>
+      <p>Tell me about your day or project. I reply to every enquiry within two days.</p>
+      <p><a class="link" href="mailto:hello@maralindqvist.example">hello@maralindqvist.example</a></p>
+    </div>
+    <form id="form" novalidate>
+      <div><label for="n">Name</label><input id="n" autocomplete="name" required></div>
+      <div><label for="e">Email</label><input id="e" type="email" autocomplete="email" required></div>
+      <div><label for="t">Type of shoot</label><select id="t"><option>Wedding</option><option>Portrait</option><option>Travel or editorial</option></select></div>
+      <div><label for="m">Tell me more</label><textarea id="m" required></textarea></div>
+      <button class="btn" type="submit">Send enquiry</button>
+      <p id="msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">© Mara Lindqvist Photography. Concept design by GreenVibe Labs. All images, names and details are sample content.</div></footer>
+
+<dialog id="lb" aria-label="Photo viewer"><div id="lb-img"></div><div class="cap"><span id="lb-cap"></span><button id="lb-x" type="button">Close</button></div></dialog>
+
+<script>
+/* Sample "photographs": illustrated scenes so the page works with no image files.
+   Replace each with <img loading="lazy" src="..." alt="..."> for real photos. */
+const shots=[
+ {t:"Golden hour vows",c:"Weddings",w:400,h:520,a:"#F2C38B",b:"#C2603B",sun:1},
+ {t:"Fjord morning",c:"Travel",w:400,h:300,a:"#BFD6DA",b:"#3E6670",sun:0},
+ {t:"Studio light",c:"Portraits",w:400,h:480,a:"#D9C3A6",b:"#4A3626",sun:0},
+ {t:"First dance",c:"Weddings",w:400,h:340,a:"#E7B9A0",b:"#6D3B3B",sun:1},
+ {t:"Desert road",c:"Travel",w:400,h:540,a:"#F0D08A",b:"#B3703C",sun:1},
+ {t:"Laughing together",c:"Portraits",w:400,h:320,a:"#C9D9B4",b:"#4F6B3E",sun:0},
+ {t:"Harbour blue hour",c:"Travel",w:400,h:420,a:"#9DB4D6",b:"#1F2F52",sun:0},
+ {t:"The veil",c:"Weddings",w:400,h:500,a:"#EFE2D5",b:"#8A7466",sun:0}
+];
+const svg=s=>`<svg viewBox="0 0 ${s.w} ${s.h}" role="img" aria-label="${s.t}, ${s.c} (placeholder illustration)"><defs><linearGradient id="g${s.w}${s.h}${s.t.length}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${s.a}"/><stop offset="1" stop-color="${s.b}"/></linearGradient></defs><rect width="${s.w}" height="${s.h}" fill="url(#g${s.w}${s.h}${s.t.length})"/>${s.sun?`<circle cx="${s.w*.68}" cy="${s.h*.35}" r="${s.w*.12}" fill="#FFF3D6" opacity=".9"/>`:''}<path d="M0 ${s.h*.78} Q ${s.w*.3} ${s.h*.6} ${s.w*.55} ${s.h*.74} T ${s.w} ${s.h*.68} V${s.h} H0Z" fill="${s.b}" opacity=".85"/><path d="M0 ${s.h*.88} Q ${s.w*.4} ${s.h*.75} ${s.w} ${s.h*.86} V${s.h} H0Z" fill="#000" opacity=".35"/></svg>`;
+const gal=document.getElementById('gallery'),lb=document.getElementById('lb');
+gal.innerHTML=shots.map((s,i)=>`<button class="shot" data-i="${i}" data-c="${s.c}" aria-label="Open ${s.t}">${svg(s)}<span>${s.t}</span></button>`).join('');
+gal.addEventListener('click',e=>{const b=e.target.closest('.shot');if(!b)return;const s=shots[b.dataset.i];
+  document.getElementById('lb-img').innerHTML=svg(s);document.getElementById('lb-cap').textContent=s.t+" · "+s.c;lb.showModal();});
+document.getElementById('lb-x').onclick=()=>lb.close();
+lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
+document.querySelectorAll('.cats button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.cats button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  gal.querySelectorAll('.shot').forEach(s=>s.hidden=!(b.dataset.c==='all'||s.dataset.c===b.dataset.c));
+}));
+/* Enquiry form: swap for Formspree/Netlify Forms in production */
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();
+  const ok=n.value.trim()&&/^\S+@\S+\.\S+$/.test(e2.value)&&m.value.trim();
+  msg.textContent=ok?'Thank you! This is a concept demo, so nothing was sent.':'Please add your name, a valid email and a message.';});
+const n=document.getElementById('n'),e2=document.getElementById('e'),m=document.getElementById('m'),msg=document.getElementById('msg');
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Netlify settings for the GreenVibe Labs site
+[build]
+  publish = "."            # index.html lives in the project root
+
+[functions]
+  directory = "netlify/functions"   # contact form backend

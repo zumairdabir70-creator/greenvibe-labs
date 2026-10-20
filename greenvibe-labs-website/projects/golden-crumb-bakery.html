@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golden Crumb Bakery | Sourdough, Pastries &amp; Custom Cakes in Portland</title>
+<meta name="description" content="Golden Crumb Bakery in Portland, OR: slow-fermented sourdough, butter croissants, fruit tarts and custom cakes. Pre-order for pickup today.">
+<meta name="theme-color" content="#FFF8EC">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Golden Crumb Bakery | Portland, OR">
+<meta property="og:description" content="Slow-fermented bread, butter-rich pastries, cakes made for your day. Pre-order for pickup.">
+<meta property="og:locale" content="en_US">
+<!-- [TODO] Add og:image (1200x630 photo) and og:url once the domain is live -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Inline SVG favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23E3B04B'/%3E%3Cpath d='M18 60c0-18 14-30 32-30s32 12 32 30c0 6-4 10-10 10H28c-6 0-10-4-10-10z' fill='%23C0643A'/%3E%3Cpath d='M38 40l6 18M52 38l6 20M66 42l5 16' stroke='%23FFF8EC' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- One Google Font (headings). System serif fallback if it fails to load. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&display=swap" rel="stylesheet">
+
+<!-- LocalBusiness structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "Golden Crumb Bakery",
+  "description": "Slow-fermented sourdough, butter-rich pastries, seasonal fruit tarts and custom celebration cakes in Portland, Oregon.",
+  "telephone": "+1-555-014-2290",
+  "email": "hello@goldencrumb.example",
+  "servesCuisine": ["Bakery", "Sourdough Bread", "Pastries", "Cakes"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "24 Maple Lane",
+    "addressLocality": "Portland",
+    "addressRegion": "OR",
+    "postalCode": "97205",
+    "addressCountry": "US"
+  },
+  "openingHours": ["Tu-Fr 07:00-17:00", "Sa-Su 08:00-15:00"],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "08:00", "closes": "15:00" }
+  ]
+}
+</script>
+
+<style>
+/* ==========================================================
+   Golden Crumb Bakery — styles
+   Palette: cream #FFF8EC | terracotta #C0643A | brown #3B2418 | gold #E3B04B
+   --terra-deep is a darker terracotta used for TEXT/BUTTONS to meet WCAG AA.
+   ========================================================== */
+:root{
+  --cream:#FFF8EC;
+  --cream-2:#F8ECD6;
+  --terra:#C0643A;
+  --terra-deep:#A44E2A;
+  --brown:#3B2418;
+  --brown-soft:#5A4235;
+  --gold:#E3B04B;
+  --line:rgba(59,36,24,.16);
+  --radius:18px;
+  --shadow:0 10px 30px -12px rgba(59,36,24,.35);
+  --font-head:"Fraunces", Georgia, "Times New Roman", serif;
+  --font-body:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--cream);color:var(--brown);font-family:var(--font-body);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--font-head);line-height:1.12;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.5rem,8vw,4.6rem);font-weight:800}
+h2{font-size:clamp(1.9rem,5vw,2.9rem);font-weight:700}
+h3{font-size:1.25rem;font-weight:700}
+p{margin:0 0 1em}
+a{color:var(--terra-deep)}
+:focus-visible{outline:3px solid var(--brown);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--brown);color:var(--cream);padding:.6rem 1rem;border-radius:8px;z-index:200}
+.skip:focus{left:8px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(3.5rem,9vw,6.5rem) 0}
+.eyebrow{display:inline-block;font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terra-deep);margin-bottom:.8rem}
+.lede{font-size:1.15rem;color:var(--brown-soft);max-width:60ch}
+.center{text-align:center}.center .lede{margin-inline:auto}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.5rem;border-radius:999px;font:700 1rem/1 var(--font-body);text-decoration:none;border:2px solid transparent;cursor:pointer;min-height:48px;transition:transform .2s ease, box-shadow .2s ease, background .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-primary{background:var(--gold);color:var(--brown);border-color:var(--brown)}
+.btn-primary:hover{background:#ECBC5E}
+.btn-dark{background:var(--terra-deep);color:#fff}
+.btn-dark:hover{background:#8F4322}
+.btn-ghost{background:transparent;color:var(--brown);border-color:var(--brown)}
+.btn-ghost:hover{background:var(--brown);color:var(--cream)}
+.btn-sm{padding:.65rem 1.1rem;min-height:44px;font-size:.95rem}
+
+/* ---------- Nav ---------- */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,248,236,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
+.logo{font-family:var(--font-head);font-weight:800;font-size:1.3rem;color:var(--brown);text-decoration:none;display:flex;align-items:center;gap:.5rem}
+.logo-dot{width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--terra)}
+.menu{display:none;list-style:none;margin:0;padding:0}
+.menu a{color:var(--brown);text-decoration:none;font-weight:600;padding:.5rem .2rem;position:relative}
+.menu a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--terra);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.menu a:hover::after{transform:scaleX(1)}
+.nav-cta{display:none}
+.burger{width:48px;height:48px;border:2px solid var(--brown);border-radius:12px;background:transparent;cursor:pointer;display:grid;place-items:center;padding:0}
+.burger span{display:block;width:22px;height:2px;background:var(--brown);position:relative;transition:background .2s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:22px;height:2px;background:var(--brown);transition:transform .25s ease}
+.burger span::before{top:-7px}.burger span::after{top:7px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-7px) rotate(-45deg)}
+.mobile-panel{display:none;border-top:1px solid var(--line);background:var(--cream);padding:1rem 1.25rem 1.5rem}
+.mobile-panel.open{display:block}
+.mobile-panel ul{list-style:none;margin:0 0 1rem;padding:0}
+.mobile-panel li a{display:block;padding:.85rem 0;color:var(--brown);font-weight:600;text-decoration:none;border-bottom:1px solid var(--line);font-size:1.1rem}
+.mobile-panel .btn{width:100%}
+@media(min-width:900px){
+  .menu{display:flex;gap:1.6rem}
+  .nav-cta{display:inline-flex}
+  .burger,.mobile-panel{display:none!important}
+}
+
+/* ---------- Hero ---------- */
+.hero{padding-top:clamp(2.5rem,7vw,5rem);overflow:hidden;background:
+  radial-gradient(900px 400px at 85% 10%, rgba(227,176,75,.35), transparent 70%), var(--cream)}
+.hero-grid{display:grid;gap:2.5rem;align-items:center}
+.hero h1 em{font-style:normal;color:var(--terra-deep);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.16em;background:var(--gold);z-index:-1;border-radius:99px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:1.8rem;font-size:.95rem;color:var(--brown-soft)}
+.hero-meta span::before{content:"✦";color:var(--terra);margin-right:.45rem}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr}}
+
+/* CSS-drawn hero graphic: sun, scored loaf, steam, wheat sprigs */
+.art{position:relative;width:min(420px,88%);aspect-ratio:1;margin-inline:auto}
+.art .sun{position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#F4CC77,var(--gold) 60%,#D69E36);animation:float 7s ease-in-out infinite}
+.art .ring{position:absolute;inset:0;border-radius:50%;border:2px dashed var(--terra);opacity:.55;animation:spin 60s linear infinite}
+.art .loaf{position:absolute;left:12%;right:12%;bottom:22%;height:38%;background:linear-gradient(180deg,#D27A4A,var(--terra) 55%,#9A4A26);border-radius:50% 50% 42% 42% / 70% 70% 30% 30%;box-shadow:inset 0 -14px 0 rgba(59,36,24,.18), 0 18px 20px -10px rgba(59,36,24,.45)}
+.art .score{position:absolute;top:22%;height:44%;width:9%;background:var(--cream);border-radius:99px;transform:rotate(24deg);opacity:.92}
+.art .s1{left:28%}.art .s2{left:46%}.art .s3{left:64%}
+.art .steam{position:absolute;bottom:62%;width:5%;height:16%;border-radius:99px;background:rgba(59,36,24,.28);animation:steam 3.2s ease-in-out infinite}
+.art .st1{left:36%}.art .st2{left:48%;animation-delay:.6s}.art .st3{left:60%;animation-delay:1.2s}
+.art .board{position:absolute;left:4%;right:4%;bottom:14%;height:9%;background:var(--brown);border-radius:12px}
+.art .badge{position:absolute;right:-2%;top:6%;width:26%;aspect-ratio:1;border-radius:50%;background:var(--brown);color:var(--cream);display:grid;place-items:center;text-align:center;font:700 .72rem/1.15 var(--font-body);letter-spacing:.06em;text-transform:uppercase;transform:rotate(12deg);padding:.4rem}
+@keyframes float{50%{transform:translateY(-8px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes steam{0%,100%{transform:translateY(0);opacity:.15}50%{transform:translateY(-14px);opacity:.5}}
+
+/* ---------- Menu ---------- */
+#menu{background:var(--cream-2)}
+.tabs{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin:2rem 0 2.2rem}
+.tab{font:700 1rem/1 var(--font-body);padding:.85rem 1.4rem;border-radius:999px;border:2px solid var(--brown);background:transparent;color:var(--brown);cursor:pointer;min-height:48px;transition:background .2s,color .2s}
+.tab:hover{background:rgba(59,36,24,.08)}
+.tab[aria-selected="true"]{background:var(--brown);color:var(--cream)}
+.panel{animation:fadeUp .4s ease both}
+.panel[hidden]{display:none}
+.items{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+@media(min-width:800px){.items{grid-template-columns:1fr 1fr}}
+.item{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:1.2rem 1.3rem;transition:transform .25s ease, box-shadow .25s ease}
+.item:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.item-top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-bottom:2px dotted var(--line);padding-bottom:.4rem;margin-bottom:.5rem}
+.item h3{margin:0}
+.price{font-weight:800;color:var(--terra-deep);white-space:nowrap}
+.item p{margin:0;color:var(--brown-soft);font-size:.98rem}
+.menu-note{text-align:center;margin-top:1.8rem;color:var(--brown-soft);font-size:.95rem}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* ---------- Story ---------- */
+.story-grid{display:grid;gap:2.5rem}
+@media(min-width:900px){.story-grid{grid-template-columns:1fr 1fr;align-items:center;gap:4rem}}
+.story-art{aspect-ratio:4/3;border-radius:var(--radius);background:
+  repeating-linear-gradient(45deg,rgba(255,248,236,.12) 0 14px,transparent 14px 28px),
+  linear-gradient(140deg,var(--terra),#8F4322);display:grid;place-items:center;color:var(--cream);text-align:center;padding:1rem;box-shadow:var(--shadow);position:relative}
+.story-art small{font-weight:700;letter-spacing:.08em}
+.story-art::after{content:"";position:absolute;inset:12px;border:2px solid rgba(255,248,236,.5);border-radius:calc(var(--radius) - 6px);pointer-events:none}
+.values{display:grid;gap:1rem;margin-top:3rem}
+@media(min-width:800px){.values{grid-template-columns:repeat(3,1fr)}}
+.value{background:var(--cream-2);border-radius:var(--radius);padding:1.5rem}
+.value .ico{width:48px;height:48px;border-radius:14px;background:var(--gold);display:grid;place-items:center;margin-bottom:.9rem}
+.value .ico svg{width:26px;height:26px;stroke:var(--brown);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.value p{margin:0;color:var(--brown-soft)}
+
+/* ---------- Gallery ---------- */
+#gallery{background:var(--brown);color:var(--cream)}
+#gallery .eyebrow{color:var(--gold)}
+#gallery .lede{color:#E6D5BE}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:2.2rem}
+@media(min-width:800px){.grid{grid-template-columns:repeat(4,1fr);grid-auto-rows:190px}.g1{grid-column:span 2;grid-row:span 2}.g4{grid-row:span 2}.g5{grid-column:span 2}}
+.tile{min-height:150px;border-radius:var(--radius);display:flex;align-items:flex-end;padding:.9rem;font-size:.85rem;font-weight:700;color:var(--brown);transition:transform .3s ease;overflow:hidden}
+.tile:hover{transform:scale(1.025)}
+.g1{background:linear-gradient(160deg,#F1C874,#D98A52)}
+.g2{background:linear-gradient(160deg,#F6E3BE,#E3B04B)}
+.g3{background:linear-gradient(160deg,#D98A52,#A44E2A);color:#fff}
+.g4{background:linear-gradient(180deg,#FFF8EC,#EBCB9A)}
+.g5{background:linear-gradient(120deg,#E3B04B,#F6E3BE)}
+.g6{background:linear-gradient(160deg,#C0643A,#7E3A1E);color:#fff}
+.tile span{background:rgba(255,248,236,.9);color:var(--brown);padding:.3rem .6rem;border-radius:8px}
+
+/* ---------- Testimonials ---------- */
+.quotes{display:grid;gap:1.2rem;margin-top:2.5rem}
+@media(min-width:800px){.quotes{grid-template-columns:repeat(3,1fr)}}
+.quote{margin:0;background:var(--cream-2);border-radius:var(--radius);padding:1.7rem;position:relative}
+.quote::before{content:"“";position:absolute;top:-.1em;left:.8rem;font:800 5rem/1 var(--font-head);color:var(--gold)}
+.quote p{margin:1.4rem 0 1rem;font-size:1.05rem}
+.quote footer{font-weight:700;color:var(--terra-deep)}
+.stars{color:var(--terra-deep);letter-spacing:.15em}
+
+/* ---------- Order form ---------- */
+#order{background:var(--cream-2)}
+.order-grid{display:grid;gap:2.5rem}
+@media(min-width:900px){.order-grid{grid-template-columns:.8fr 1.2fr;gap:4rem}}
+.steps{list-style:none;counter-reset:s;margin:1.5rem 0 0;padding:0}
+.steps li{counter-increment:s;display:flex;gap:.9rem;margin-bottom:1rem;color:var(--brown-soft)}
+.steps li::before{content:counter(s);flex:0 0 34px;height:34px;border-radius:50%;background:var(--brown);color:var(--cream);display:grid;place-items:center;font-weight:800}
+form.card{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.2rem,4vw,2rem);box-shadow:var(--shadow)}
+.fields{display:grid;gap:1.1rem}
+@media(min-width:640px){.fields{grid-template-columns:1fr 1fr}.full{grid-column:1/-1}}
+label{display:block;font-weight:700;margin-bottom:.35rem;font-size:.95rem}
+.req{color:var(--terra-deep)}
+input,select,textarea{width:100%;font:inherit;color:var(--brown);background:#fff;border:2px solid #8A7466;border-radius:12px;padding:.75rem .9rem;min-height:48px}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--gold);outline-offset:1px;border-color:var(--brown)}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:#A3261A;background:#FFF4F2}
+.err{display:none;color:#A3261A;font-size:.88rem;font-weight:600;margin-top:.3rem}
+.field.invalid .err{display:block}
+.hint{font-size:.88rem;color:var(--brown-soft);margin-top:.3rem}
+.form-status{margin-top:1rem;font-weight:600;min-height:1.5em}
+.form-status.ok{color:#1F6B3A}.form-status.bad{color:#A3261A}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:780px;margin:2.5rem auto 0}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:0;text-align:left;font:700 1.1rem/1.4 var(--font-body);color:var(--brown);padding:1.2rem 0;display:flex;justify-content:space-between;align-items:center;gap:1rem;cursor:pointer;min-height:56px}
+.faq-q .plus{flex:0 0 28px;height:28px;border-radius:50%;background:var(--gold);position:relative;transition:transform .3s ease}
+.faq-q .plus::before,.faq-q .plus::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:var(--brown);transform:translate(-50%,-50%)}
+.faq-q .plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s ease}
+.faq-q[aria-expanded="true"] .plus{transform:rotate(180deg)}
+.faq-q[aria-expanded="true"] .plus::after{transform:translate(-50%,-50%) rotate(0)}
+.faq-a{padding:0 0 1.3rem;color:var(--brown-soft);max-width:65ch}
+.faq-a[hidden]{display:none}
+.faq-a p{margin:0}
+
+/* ---------- Visit ---------- */
+#visit{background:var(--cream-2)}
+.visit-grid{display:grid;gap:2rem;margin-top:2.2rem}
+@media(min-width:900px){.visit-grid{grid-template-columns:1fr 1fr}}
+.status{display:inline-flex;align-items:center;gap:.55rem;font-weight:800;padding:.5rem 1rem;border-radius:999px;background:var(--brown);color:var(--cream);margin-bottom:1.2rem}
+.status i{width:11px;height:11px;border-radius:50%;background:#9AA39B}
+.status.open i{background:#5BD27F;box-shadow:0 0 0 4px rgba(91,210,127,.28)}
+.status.closed i{background:#F28B72}
+table{width:100%;border-collapse:collapse;margin-bottom:1.3rem}
+th,td{text-align:left;padding:.65rem .4rem;border-bottom:1px solid var(--line)}
+th{font-weight:600}
+td{text-align:right}
+tr.today{background:rgba(227,176,75,.35);font-weight:800}
+address{font-style:normal;line-height:1.7}
+.map{min-height:320px;border-radius:var(--radius);border:2px dashed var(--terra);background:
+  linear-gradient(90deg,rgba(192,100,58,.12) 1px,transparent 1px) 0 0/36px 36px,
+  linear-gradient(rgba(192,100,58,.12) 1px,transparent 1px) 0 0/36px 36px, var(--cream);
+  display:grid;place-items:center;text-align:center;padding:1.5rem;color:var(--brown-soft)}
+.map .pin{width:38px;height:38px;border-radius:50% 50% 50% 0;background:var(--terra-deep);transform:rotate(-45deg);margin:0 auto 1rem;position:relative}
+.map .pin::after{content:"";position:absolute;inset:11px;border-radius:50%;background:var(--cream)}
+
+/* ---------- Newsletter + footer ---------- */
+.news{background:var(--terra-deep);color:#fff;text-align:center}
+.news h2{color:#fff}
+.news p{color:#FBE9DC;max-width:52ch;margin-inline:auto}
+.news-form{display:flex;flex-direction:column;gap:.7rem;max-width:520px;margin:1.6rem auto 0}
+@media(min-width:600px){.news-form{flex-direction:row}}
+.news-form input{border-color:#fff}
+.news-form .btn-primary{white-space:nowrap}
+.news-msg{margin-top:.8rem;font-weight:700;min-height:1.5em;color:#fff}
+footer.site{background:var(--brown);color:#E6D5BE;padding:3rem 0 2rem}
+.foot{display:grid;gap:2rem}
+@media(min-width:800px){.foot{grid-template-columns:1.4fr 1fr 1fr}}
+footer.site a{color:var(--gold)}
+footer.site h3{color:var(--cream);font-size:1.05rem}
+footer.site ul{list-style:none;margin:0;padding:0}
+footer.site li{margin-bottom:.4rem}
+.foot-logo{font-family:var(--font-head);font-size:1.5rem;font-weight:800;color:var(--cream)}
+.copy{border-top:1px solid rgba(255,248,236,.18);margin-top:2rem;padding-top:1.2rem;font-size:.9rem}
+
+/* ---------- Scroll reveal ---------- */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ 1. NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo" aria-label="Golden Crumb Bakery, home"><span class="logo-dot" aria-hidden="true"></span>Golden Crumb</a>
+    <nav aria-label="Primary">
+      <ul class="menu">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a href="#order" class="btn btn-dark btn-sm nav-cta">Pre-order for pickup</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-panel" aria-label="Open menu"><span></span></button>
+  </div>
+  <div class="mobile-panel" id="mobile-panel">
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a href="#order" class="btn btn-dark">Pre-order for pickup</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ 2. HERO ============ -->
+<section class="hero" id="top" aria-labelledby="hero-h">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Portland, Oregon · Baked fresh daily</span>
+      <h1 id="hero-h">Bread that takes its <em>sweet time.</em></h1>
+      <p class="lede">Slow-fermented bread, butter-rich pastries, cakes made for your day. We start the dough yesterday so your morning tastes like today.</p>
+      <div class="hero-actions">
+        <a href="#order" class="btn btn-primary">Pre-order for pickup</a>
+        <a href="#menu" class="btn btn-ghost">See what's baking</a>
+      </div>
+      <div class="hero-meta">
+        <span>24-hour ferment</span>
+        <span>Real butter, always</span>
+        <span>Custom cakes</span>
+      </div>
+    </div>
+    <div class="art" role="img" aria-label="Illustration of a freshly baked, scored sourdough loaf on a wooden board in front of a golden sun">
+      <div class="ring"></div>
+      <div class="sun"></div>
+      <div class="steam st1"></div><div class="steam st2"></div><div class="steam st3"></div>
+      <div class="loaf"></div>
+      <div class="score s1"></div><div class="score s2"></div><div class="score s3"></div>
+      <div class="board"></div>
+      <div class="badge">Fresh<br>out of<br>the oven</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. MENU ============ -->
+<!-- [PLACEHOLDER] All prices and item descriptions are invented; confirm with the client. -->
+<section id="menu" aria-labelledby="menu-h">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">The menu</span>
+      <h2 id="menu-h">Made by hand, in small batches</h2>
+      <p class="lede">Loaves sell out, and pastries go fast. Pre-order to be sure yours is waiting.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Menu categories">
+      <button class="tab" role="tab" id="tab-breads" aria-selected="true" aria-controls="panel-breads">Breads</button>
+      <button class="tab" role="tab" id="tab-pastries" aria-selected="false" aria-controls="panel-pastries" tabindex="-1">Pastries</button>
+      <button class="tab" role="tab" id="tab-cakes" aria-selected="false" aria-controls="panel-cakes" tabindex="-1">Cakes</button>
+      <button class="tab" role="tab" id="tab-drinks" aria-selected="false" aria-controls="panel-drinks" tabindex="-1">Drinks</button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-breads" aria-labelledby="tab-breads" tabindex="0">
+      <ul class="items">
+        <li class="item"><div class="item-top"><h3>Classic Country Sourdough</h3><span class="price">$9.00</span></div><p>Crackling crust, open crumb, a gentle tang. Our 24-hour signature.</p></li>
+        <li class="item"><div class="item-top"><h3>Seeded Multigrain</h3><span class="price">$10.50</span></div><p>Sunflower, flax and sesame folded into a nutty whole-wheat sourdough.</p></li>
+        <li class="item"><div class="item-top"><h3>Rosemary Sea Salt Focaccia</h3><span class="price">$8.00</span></div><p>Olive-oil-dimpled, golden on the bottom, soft as a pillow in the middle.</p></li>
+        <li class="item"><div class="item-top"><h3>Honey Oat Sandwich Loaf</h3><span class="price">$8.50</span></div><p>Tender, slightly sweet, built for toast and lunchboxes.</p></li>
+        <li class="item"><div class="item-top"><h3>Olive &amp; Thyme Boule</h3><span class="price">$10.00</span></div><p>Briny Castelvetrano olives and fresh thyme in a chewy sourdough crumb.</p></li>
+      </ul>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-pastries" aria-labelledby="tab-pastries" tabindex="0" hidden>
+      <ul class="items">
+        <li class="item"><div class="item-top"><h3>Butter Croissant</h3><span class="price">$4.75</span></div><p>Laminated by hand into dozens of shattering layers. Plain, and proud of it.</p></li>
+        <li class="item"><div class="item-top"><h3>Cinnamon Roll</h3><span class="price">$5.50</span></div><p>Soft spiral, brown-sugar cinnamon, and cream cheese glaze that pools just right.</p></li>
+        <li class="item"><div class="item-top"><h3>Seasonal Fruit Tart</h3><span class="price">$6.50</span></div><p>Crisp shortcrust, vanilla pastry cream, and whatever the market is feeling.</p></li>
+        <li class="item"><div class="item-top"><h3>Almond Croissant</h3><span class="price">$5.75</span></div><p>Twice-baked with frangipane and a snowfall of toasted almonds.</p></li>
+        <li class="item"><div class="item-top"><h3>Brown Butter Chocolate Chip Cookie</h3><span class="price">$3.75</span></div><p>Crisp edges, gooey middle, flaky salt on top.</p></li>
+      </ul>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-cakes" aria-labelledby="tab-cakes" tabindex="0" hidden>
+      <ul class="items">
+        <li class="item"><div class="item-top"><h3>Vanilla Bean Celebration Cake</h3><span class="price">from $48</span></div><p>Three tender layers, real vanilla, silky buttercream. The birthday classic.</p></li>
+        <li class="item"><div class="item-top"><h3>Dark Chocolate Ganache Cake</h3><span class="price">from $54</span></div><p>Deep cocoa sponge, glossy ganache, and a little espresso to wake it up.</p></li>
+        <li class="item"><div class="item-top"><h3>Lemon Berry Cake</h3><span class="price">from $52</span></div><p>Bright lemon curd, fresh berries, whipped mascarpone frosting.</p></li>
+        <li class="item"><div class="item-top"><h3>Carrot Cake</h3><span class="price">from $50</span></div><p>Warm-spiced, studded with walnuts, finished with cream cheese frosting.</p></li>
+        <li class="item"><div class="item-top"><h3>Tiered &amp; Wedding Cakes</h3><span class="price">Quote</span></div><p>Tell us your date and your dream. We'll sketch, taste and build it together.</p></li>
+      </ul>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-drinks" aria-labelledby="tab-drinks" tabindex="0" hidden>
+      <ul class="items">
+        <li class="item"><div class="item-top"><h3>Drip Coffee</h3><span class="price">$3.00</span></div><p>Medium roast, brewed fresh all morning. Refills are encouraged.</p></li>
+        <li class="item"><div class="item-top"><h3>Latte</h3><span class="price">$4.75</span></div><p>Double espresso, steamed milk, and your choice of oat or whole.</p></li>
+        <li class="item"><div class="item-top"><h3>Honey Cinnamon Cortado</h3><span class="price">$4.50</span></div><p>Small, strong and a little sweet. Pairs dangerously well with a croissant.</p></li>
+        <li class="item"><div class="item-top"><h3>Hot Chocolate</h3><span class="price">$4.25</span></div><p>Real melted chocolate, steamed milk, and a toasted marshmallow lid.</p></li>
+        <li class="item"><div class="item-top"><h3>Iced Black Tea</h3><span class="price">$3.50</span></div><p>Brewed daily, lightly sweetened with a lemon wedge.</p></li>
+      </ul>
+    </div>
+    <p class="menu-note">Menu rotates with the seasons and the harvest. Ask at the counter about today's specials.</p>
+  </div>
+</section>
+
+<!-- ============ 4. STORY + VALUES ============ -->
+<section id="story" aria-labelledby="story-h">
+  <div class="wrap">
+    <div class="story-grid">
+      <div class="story-art reveal" role="img" aria-label="Placeholder for a photo of the bakers shaping dough">
+        <small>[TODO] Photo: bakers at the bench</small>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Our story</span>
+        <h2 id="story-h">We just let the dough take its time</h2>
+        <p>Golden Crumb started with a sourdough starter, a borrowed oven, and the stubborn belief that good bread can't be rushed. Today the oven is our own, but the rule hasn't changed: nothing leaves the kitchen until it's ready.</p>
+        <p>Every loaf ferments for a full day. Every croissant gets its butter folded in by hand. Whether you're grabbing a Tuesday baguette or planning a wedding cake, you're getting the same care and the same slightly obsessive attention to crust.</p>
+        <a href="#order" class="btn btn-dark">Pre-order for pickup</a>
+      </div>
+    </div>
+
+    <div class="values">
+      <div class="value reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21V8"/><path d="M12 12c-3 0-5-2-5-5 3 0 5 2 5 5z"/><path d="M12 12c3 0 5-2 5-5-3 0-5 2-5 5z"/><path d="M12 17c-3 0-5-2-5-5 3 0 5 2 5 5z"/><path d="M12 17c3 0 5-2 5-5-3 0-5 2-5 5z"/></svg></div>
+        <h3>Local flour</h3>
+        <p>We mill our wheat with Pacific Northwest farms, so our bread tastes like somewhere.</p>
+      </div>
+      <div class="value reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2"/><path d="M9 2h6"/></svg></div>
+        <h3>24-hour ferment</h3>
+        <p>A long, cool rise builds deeper flavor, a better crumb, and bread that's easier to digest.</p>
+      </div>
+      <div class="value reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></div>
+        <h3>Baked daily</h3>
+        <p>Our ovens fire before sunrise. What doesn't sell is shared with neighbors, not stretched into tomorrow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. GALLERY ============ -->
+<section id="gallery" aria-labelledby="gal-h">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">From the bakery</span>
+      <h2 id="gal-h">A peek behind the counter</h2>
+      <p class="lede">Flour on the apron, steam on the window. Here's a taste of the daily scene.</p>
+    </div>
+    <div class="grid">
+      <div class="tile g1 reveal" role="img" aria-label="Placeholder: sourdough loaves cooling on a rack"><span>[TODO] Photo: sourdough on the rack</span></div>
+      <div class="tile g2 reveal" role="img" aria-label="Placeholder: butter croissants"><span>[TODO] Photo: croissants</span></div>
+      <div class="tile g3 reveal" role="img" aria-label="Placeholder: cinnamon rolls"><span>[TODO] Photo: cinnamon rolls</span></div>
+      <div class="tile g4 reveal" role="img" aria-label="Placeholder: custom celebration cake"><span>[TODO] Photo: celebration cake</span></div>
+      <div class="tile g5 reveal" role="img" aria-label="Placeholder: seasonal fruit tarts"><span>[TODO] Photo: fruit tarts</span></div>
+      <div class="tile g6 reveal" role="img" aria-label="Placeholder: the bakery storefront"><span>[TODO] Photo: storefront</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. TESTIMONIALS ============ -->
+<!-- [PLACEHOLDER] Testimonials are invented. Replace with real customer quotes before launch. -->
+<section id="reviews" aria-labelledby="rev-h">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Kind words</span>
+      <h2 id="rev-h">Neighbors who keep coming back</h2>
+    </div>
+    <div class="quotes">
+      <figure class="quote reveal">
+        <p>I came in for one croissant and left with a loaf, two rolls, and a plan to return tomorrow. That crust is unreal.</p>
+        <footer><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><br>Maya R.</footer>
+      </figure>
+      <figure class="quote reveal">
+        <p>They made our daughter's birthday cake exactly as she imagined it. Beautiful, and gone in ten minutes flat.</p>
+        <footer><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><br>Daniel K.</footer>
+      </figure>
+      <figure class="quote reveal">
+        <p>Pre-ordering is so easy. I pick up my sourdough on the way to work, still warm. It's the best part of my Friday.</p>
+        <footer><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><br>Priya S.</footer>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. ORDER FORM ============ -->
+<section id="order" aria-labelledby="order-h">
+  <div class="wrap order-grid">
+    <div class="reveal">
+      <span class="eyebrow">Pre-order for pickup</span>
+      <h2 id="order-h">Custom cakes &amp; pickup orders</h2>
+      <p class="lede">Planning a celebration, or just want a loaf waiting for you? Tell us what you need and we'll confirm by email.</p>
+      <ol class="steps">
+        <li>Send the form. It opens in your email app, ready to send.</li>
+        <li>We reply with details, a quote, and a flavor chat if you'd like one.</li>
+        <li>Pick up fresh at 24 Maple Lane on your day.</li>
+      </ol>
+    </div>
+
+    <!-- [TODO] Form endpoint: currently submits via mailto. For a hosted option, connect Formspree or Netlify Forms and replace the mailto logic in the script. -->
+    <form class="card reveal" id="order-form" novalidate aria-labelledby="order-h">
+      <div class="fields">
+        <div class="field">
+          <label for="f-name">Full name <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+          <div class="err" id="e-name">Please enter your name.</div>
+        </div>
+        <div class="field">
+          <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+          <div class="err" id="e-email">Please enter a valid email address.</div>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="e-phone">
+          <div class="err" id="e-phone">Please enter a phone number with at least 7 digits.</div>
+        </div>
+        <div class="field">
+          <label for="f-date">Pickup date <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-date" name="date" type="date" required aria-describedby="e-date h-date">
+          <div class="hint" id="h-date">Please allow 3+ days for cakes. We're closed Mondays. <!-- [PLACEHOLDER] lead time --></div>
+          <div class="err" id="e-date">Please pick a Tue–Sun date at least 3 days from today.</div>
+        </div>
+        <div class="field">
+          <label for="f-size">Cake size <span class="req" aria-hidden="true">*</span></label>
+          <select id="f-size" name="size" required aria-describedby="e-size">
+            <option value="">Choose a size</option>
+            <option>6-inch (serves 6–8)</option>
+            <option>8-inch (serves 10–14)</option>
+            <option>10-inch (serves 18–24)</option>
+            <option>Half sheet (serves 30–40)</option>
+            <option>Tiered / not sure yet</option>
+            <option>No cake: bread &amp; pastry order</option>
+          </select>
+          <div class="err" id="e-size">Please choose an option.</div>
+        </div>
+        <div class="field">
+          <label for="f-flavor">Flavor <span class="req" aria-hidden="true">*</span></label>
+          <select id="f-flavor" name="flavor" required aria-describedby="e-flavor">
+            <option value="">Choose a flavor</option>
+            <option>Vanilla bean</option>
+            <option>Dark chocolate</option>
+            <option>Lemon berry</option>
+            <option>Carrot</option>
+            <option>Something else (tell us below)</option>
+          </select>
+          <div class="err" id="e-flavor">Please choose a flavor.</div>
+        </div>
+        <div class="field full">
+          <label for="f-notes">Notes</label>
+          <textarea id="f-notes" name="notes" placeholder="Message on the cake, allergies, colors, or any bread and pastry you'd like added to your pickup."></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-dark" style="margin-top:1.3rem;width:100%">Send my pre-order request</button>
+      <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ 8. FAQ ============ -->
+<!-- [PLACEHOLDER] Policies below (lead time, delivery, payment) are assumptions; confirm with the client. -->
+<section id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2 id="faq-h">Questions, answered</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item">
+        <h3><button class="faq-q" aria-expanded="false" aria-controls="a1" id="q1">What about allergens?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="a1" role="region" aria-labelledby="q1" hidden><p>Our kitchen handles wheat, dairy, eggs, tree nuts, and sesame every day, so we can't guarantee anything is allergen-free. Tell us your needs when you order and we'll walk you through ingredients and cross-contact honestly.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" aria-expanded="false" aria-controls="a2" id="q2">How far ahead should I order?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="a2" role="region" aria-labelledby="q2" hidden><p>Custom cakes need at least 3 days' notice, and tiered or wedding cakes need 3 weeks or more. Bread and pastry pre-orders are best placed by the day before pickup.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" aria-expanded="false" aria-controls="a3" id="q3">Do you deliver?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="a3" role="region" aria-labelledby="q3" hidden><p>Not routinely. We focus on pickup so everything stays fresh. For large events, ask us about a one-off delivery and we'll see what's possible.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" aria-expanded="false" aria-controls="a4" id="q4">How does pickup work?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="a4" role="region" aria-labelledby="q4" hidden><p>Come to 24 Maple Lane during open hours on your pickup day and give us your name at the counter. Your order will be boxed and waiting. Cakes are packed in a sturdy box, so keep it flat in the car.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" aria-expanded="false" aria-controls="a5" id="q5">Can you make a fully custom cake?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="a5" role="region" aria-labelledby="q5" hidden><p>Yes. Share your theme, flavors, and guest count in the form and we'll reply with ideas and a quote. We love florals, simple lettering, and anything slightly whimsical.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-q" aria-expanded="false" aria-controls="a6" id="q6">How do I pay?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="a6" role="region" aria-labelledby="q6" hidden><p>Custom cakes need a deposit to hold your date, and the balance is due at pickup. We accept major cards and cash in the shop. Bread and pastry orders are paid at pickup.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. VISIT ============ -->
+<section id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Come say hi</span>
+      <h2 id="visit-h">Hours &amp; location</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="reveal">
+        <div class="status" id="open-badge" role="status" aria-live="polite"><i aria-hidden="true"></i><span id="open-text">Checking hours…</span></div>
+        <table aria-label="Opening hours">
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>Closed</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>7am – 5pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>7am – 5pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>7am – 5pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>7am – 5pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>8am – 3pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>8am – 3pm</td></tr>
+          </tbody>
+        </table>
+        <address>
+          <strong>Golden Crumb Bakery</strong><br>
+          24 Maple Lane<br>Portland, OR 97205<br>
+          <a href="tel:+15550142290">(555) 014-2290</a><br>
+          <a href="mailto:hello@goldencrumb.example">hello@goldencrumb.example</a>
+        </address>
+        <p style="margin-top:1rem"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=24+Maple+Lane,+Portland,+OR+97205" target="_blank" rel="noopener">Get directions<span class="sr-only" style="position:absolute;left:-9999px"> (opens in a new tab)</span> →</a></p>
+      </div>
+      <div class="map reveal" role="img" aria-label="Map placeholder for 24 Maple Lane, Portland">
+        <div>
+          <div class="pin" aria-hidden="true"></div>
+          <strong>[TODO] Map embed</strong><br>
+          Paste a Google Maps or OpenStreetMap iframe here for 24 Maple Lane, Portland, OR 97205.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. NEWSLETTER ============ -->
+<section class="news" aria-labelledby="news-h">
+  <div class="wrap reveal">
+    <h2 id="news-h">Hear it from the oven first</h2>
+    <p>Seasonal tarts, holiday pre-order dates, and the occasional surprise bake. One short email, never spam.</p>
+    <!-- [TODO] Connect to an email service (Mailchimp, Buttondown, ConvertKit). Currently front-end only. -->
+    <form class="news-form" id="news-form" novalidate>
+      <label for="n-email" style="position:absolute;left:-9999px">Email address</label>
+      <input id="n-email" type="email" placeholder="you@example.com" autocomplete="email" required aria-describedby="news-msg">
+      <button class="btn btn-primary" type="submit">Keep me posted</button>
+    </form>
+    <div class="news-msg" id="news-msg" role="status" aria-live="polite"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="foot-logo">Golden Crumb</div>
+        <p>Slow-fermented bread, butter-rich pastries, cakes made for your day.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#story">Our story</a></li>
+          <li><a href="#order">Pre-order</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow &amp; contact</h3>
+        <ul>
+          <!-- [TODO] Replace # with the real social profile URLs -->
+          <li><a href="#" aria-label="Instagram @goldencrumb">Instagram @goldencrumb</a></li>
+          <li><a href="#" aria-label="Facebook">Facebook</a></li>
+          <li><a href="tel:+15550142290">(555) 014-2290</a></li>
+          <li><a href="mailto:hello@goldencrumb.example">hello@goldencrumb.example</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© <span id="yr">2026</span> Golden Crumb Bakery · 24 Maple Lane, Portland, OR 97205</div>
+  </div>
+</footer>
+
+<script>
+/* ==========================================================
+   Golden Crumb Bakery — behavior (vanilla JS)
+   ========================================================== */
+(function(){
+  'use strict';
+  document.documentElement.classList.add('js');
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* ---------- Mobile menu ---------- */
+  var burger = document.getElementById('burger');
+  var panel = document.getElementById('mobile-panel');
+  function setMenu(open){
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    panel.classList.toggle('open', open);
+  }
+  burger.addEventListener('click', function(){ setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  panel.addEventListener('click', function(e){ if(e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true'){ setMenu(false); burger.focus(); }
+  });
+
+  /* ---------- Menu tabs (arrow-key accessible) ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function activate(tab, focus){
+    tabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if(focus) tab.focus();
+  }
+  tabs.forEach(function(tab, i){
+    tab.addEventListener('click', function(){ activate(tab); });
+    tab.addEventListener('keydown', function(e){
+      var n = null;
+      if(e.key === 'ArrowRight') n = tabs[(i+1) % tabs.length];
+      else if(e.key === 'ArrowLeft') n = tabs[(i-1+tabs.length) % tabs.length];
+      else if(e.key === 'Home') n = tabs[0];
+      else if(e.key === 'End') n = tabs[tabs.length-1];
+      if(n){ e.preventDefault(); activate(n, true); }
+    });
+  });
+
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !open);
+      document.getElementById(btn.getAttribute('aria-controls')).hidden = open;
+    });
+  });
+
+  /* ---------- Scroll reveal ---------- */
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el, i){ el.style.transitionDelay = (i % 3) * 80 + 'ms'; io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- Live open/closed badge (Portland time) ---------- */
+  var HOURS = {0:[8,15],1:null,2:[7,17],3:[7,17],4:[7,17],5:[7,17],6:[8,15]};
+  var DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  function fmt(h){ return (h % 12 || 12) + (h < 12 ? 'am' : 'pm'); }
+  function portlandNow(){
+    var parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    var o = {}; parts.forEach(function(p){ o[p.type] = p.value; });
+    return { day: DAYS.indexOf(o.weekday), mins: (parseInt(o.hour,10) % 24) * 60 + parseInt(o.minute,10) };
+  }
+  function updateStatus(){
+    var badge = document.getElementById('open-badge');
+    var text = document.getElementById('open-text');
+    var n;
+    try { n = portlandNow(); } catch(e){ text.textContent = 'See hours below'; return; }
+    var today = HOURS[n.day];
+    var isOpen = today && n.mins >= today[0]*60 && n.mins < today[1]*60;
+    badge.classList.toggle('open', !!isOpen);
+    badge.classList.toggle('closed', !isOpen);
+    if(isOpen){
+      text.textContent = 'Open now · closes ' + fmt(today[1]);
+    } else {
+      var msg = 'Closed';
+      for(var i = 0; i < 8; i++){
+        var d = (n.day + i) % 7, h = HOURS[d];
+        if(h && (i > 0 || n.mins < h[0]*60)){
+          msg += ' · opens ' + (i === 0 ? 'today' : i === 1 ? 'tomorrow' : DAYS[d]) + ' ' + fmt(h[0]);
+          break;
+        }
+      }
+      text.textContent = msg;
+    }
+    document.querySelectorAll('tr[data-day]').forEach(function(tr){
+      tr.classList.toggle('today', parseInt(tr.dataset.day,10) === n.day);
+    });
+  }
+  updateStatus();
+  setInterval(updateStatus, 60000);
+
+  /* ---------- Order form: validation + mailto ---------- */
+  var form = document.getElementById('order-form');
+  var status = document.getElementById('form-status');
+  var dateEl = document.getElementById('f-date');
+  var MIN_DAYS = 3; // [PLACEHOLDER] lead time, confirm with client
+
+  function minDate(){ var d = new Date(); d.setDate(d.getDate() + MIN_DAYS); return d; }
+  function iso(d){ return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+  dateEl.min = iso(minDate());
+
+  function setValid(el, ok){
+    var field = el.closest('.field');
+    field.classList.toggle('invalid', !ok);
+    el.setAttribute('aria-invalid', !ok);
+    return ok;
+  }
+  function validate(){
+    var f = form.elements, ok = true, first = null;
+    function check(el, cond){ var v = setValid(el, cond); if(!v){ ok = false; if(!first) first = el; } }
+    check(f.name, f.name.value.trim().length > 1);
+    check(f.email, /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.email.value.trim()));
+    check(f.phone, f.phone.value.replace(/\D/g,'').length >= 7);
+    var dv = f.date.value, dOK = false;
+    if(dv){
+      var d = new Date(dv + 'T12:00:00');
+      var min = minDate(); min.setHours(0,0,0,0);
+      dOK = d >= min && d.getDay() !== 1;
+    }
+    check(f.date, dOK);
+    check(f.size, !!f.size.value);
+    check(f.flavor, !!f.flavor.value);
+    if(first) first.focus();
+    return ok;
+  }
+  form.addEventListener('input', function(e){
+    var field = e.target.closest('.field');
+    if(field && field.classList.contains('invalid')) validate();
+  });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    status.className = 'form-status';
+    if(!validate()){ status.classList.add('bad'); status.textContent = 'Please fix the highlighted fields.'; return; }
+    var f = form.elements;
+    var body = [
+      'Name: ' + f.name.value.trim(),
+      'Email: ' + f.email.value.trim(),
+      'Phone: ' + f.phone.value.trim(),
+      'Pickup date: ' + f.date.value,
+      'Size: ' + f.size.value,
+      'Flavor: ' + f.flavor.value,
+      'Notes: ' + (f.notes.value.trim() || '(none)')
+    ].join('\r\n');
+    var subject = 'Pre-order request: ' + f.name.value.trim() + ' (' + f.date.value + ')';
+    status.classList.add('ok');
+    status.textContent = 'Opening your email app… If nothing happens, email hello@goldencrumb.example directly.';
+    window.location.href = 'mailto:hello@goldencrumb.example?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+
+  /* ---------- Newsletter (front-end only) ---------- */
+  var nf = document.getElementById('news-form');
+  var ne = document.getElementById('n-email');
+  var nm = document.getElementById('news-msg');
+  nf.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(ne.value.trim())){
+      nm.textContent = 'Thank you! You\'re on the list.'; // [TODO] send to email service
+      ne.value = ''; ne.removeAttribute('aria-invalid');
+    } else {
+      nm.textContent = 'Please enter a valid email address.';
+      ne.setAttribute('aria-invalid','true'); ne.focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>
